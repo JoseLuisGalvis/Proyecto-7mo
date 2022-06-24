@@ -1,0 +1,1056 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 200px;
+  background-color: #ffff;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Estructura General de la Barra de Navegación */
+
+#barra-navegacion{
+  background: none; 
+  height: 80px;
+  width: 95.5%;
+  position:relative;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px;
+  padding: 0px 30px;
+}
+
+#logo {
+  font-size: 3em;
+  color: rgb(48, 224, 233);;
+  font-weight: bold;
+  margin:0 0 0 1.5em;
+  padding:0;
+}
+
+#menu ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+#menu ul a {
+  display:block;
+  color:rgb(7, 2, 51);
+  text-decoration:none;
+  font-size:25px;
+  padding:10px 30px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+#menu a:active {
+  color: rgb(48, 224, 233);
+  background: rgba(182, 31, 20, 0.151);
+}
+
+#menu ul li {
+  position:relative;
+  font-weight: bold;
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+#menu ul li:hover {
+  background: rgba(202, 218, 233, 0.521);
+}
+
+#menu ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:rgb(43, 95, 95); 
+  padding:0;
+}
+
+#menu ul li:hover > ul {
+  display:block;
+}
+
+.container-reloj {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.cont-reloj{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.5rem;
+  background-color: rgb(7, 2, 51);
+  color:#ffff;
+  border: 0.25rem azure solid;
+  box-shadow: 0 0 20px rgb(48, 224, 233);
+  font-weight: bold;
+  width: 40%;
+  border-radius: 0.5rem;
+  outline-offset: 5px;
+  outline: 3px solid #ffff;
+  margin: 1rem 3rem 0rem 3rem;
+  padding: 0.3rem;
+}
+
+#fec_Datos {
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 2rem;
+  color:rgb(48, 224, 233);
+  margin: 1rem 0rem 0rem 3rem;
+  padding: 0rem 0.7rem 1.2rem 0.7rem;
+}
+
+/*############################## *  **  Text - Box  --  Portada **  * ##############################*/
+
+.text-box{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background:rgb(107, 240, 240);
+  border-radius: 1rem;
+  margin: 0.5rem 2rem 0rem 2rem;
+  padding:0.5em 0.5em 0.5em 2em;
+}
+
+.text-box h2 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  position: relative;
+}
+
+.text-box h2::before, h2::after {
+  display: flex;
+  flex-wrap: wrap;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.text-box h2::before {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(107, 240, 240);
+  border-radius: 0.5rem;
+  animation: type 3s steps(25) 1s forwards infinite;
+  width: 100%;
+}
+
+.text-box p {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(10, 6, 132);
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.text-box h2::after {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 1;
+  width: 2px; 
+  background: #fff;
+  color:#fff;
+  animation:  type 3s steps(25) 1s forwards infinite,
+              blink 0.6s steps(15) infinite;
+}
+
+@keyframes type {
+  to {
+    left: 110%;
+  }
+}
+
+@keyframes blink {
+  0% , 50%{
+    opacity: 0;
+  } 
+  51%, 100% {
+     opacity: 1;
+  }
+}
+
+/* */
+/* Estructura General de la Portada */
+
+#portada {
+    height: 50em;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    margin: 0.5em 0.9em 1.1em 0.3em;
+    padding: 0em;
+}
+
+.container-video {
+  height: 42em;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url(file:///C:/Users/Jos%C3%A9%20Luis/Desktop/juanJose/fondoPortada.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1em;
+  margin: 2em 0em 0em 0em;
+  padding: 0.1em 1em 1.5em 1em;
+}
+
+#video-FSAE2014 {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#myVideo {
+  height: 35em;
+  position: relative;
+  width: 90%;
+  border-radius: 1em;
+  z-index: 0;
+  margin: 1em 0em 0em 0em;
+}
+
+/* Este es el background del Botón de Pausar el Video */
+
+.content {
+  float:none;
+  position: absolute;
+  display: flex;
+  width: 45%;
+  bottom: 1em;
+  background: rgba(53, 52, 52, 0.144);
+  border-radius: 0.5em;
+  color: #f1f1f1;
+  margin: 0em 0em 5em 0em;
+  padding: 2em;
+}
+
+#myBtn-portada {
+  width: 5em;
+  padding: 0.5em;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn-portada:hover {
+  background: #ddd;
+  color: black;
+}
+
+.content button{
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 0.2em 2em;
+  box-shadow: 0.2em 0.2em rgb(107, 240, 240);
+  border-radius: 0.45em;
+}
+
+button:hover {
+  animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow:
+    0 0 1.14em #5ddcff,
+    0 0 3.1em #4e00c2;
+  }
+}
+
+/* ********** Efecyo Ondas ********** */
+
+:root {
+  --ripple: #0c59f3;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: var(--background);
+  overflow: hidden;
+}
+
+.container span {
+  position: absolute;
+  box-shadow: 0 0 8px var(--ripple),
+              inset 0 0 6px var(--ripple);
+  animation: ripple 2s linear;
+  
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes ripple {
+  0% {
+      width: 0;
+      height: 0;
+  }
+  90%{
+      width: 350px;
+      height: 350px;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/* # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # */
+/* ** ***** ##############          Código      Responsive         ############## ***** ** */
+/* ** ***** ##############          Escritorio 1024 px - 1800 px       ############## ***** ** */
+/* # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # */
+
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+
+  #barra-navegacion { 
+    height: 60px;
+    margin: 5px 10px;
+    padding: 0px 20px;
+  }
+
+  #logo {
+    font-size: 2em;
+    margin:0 0 0 1em;
+  }
+  
+  #menu ul a {
+    font-size:20px;
+    padding:5px 20px;
+  }
+  
+  .container-reloj {
+    height: 2em;
+    margin: 0.5em;
+  }
+
+  .cont-reloj{
+    font-size: 2rem;
+    box-shadow: 0 0 20px rgb(48, 224, 233);
+    outline-offset: 4px;
+    outline: 3px solid #ffff;
+    margin: 0.4rem 2rem 0rem 2rem;
+    padding: 0.2rem;
+  }
+
+  #fec_Datos {
+    font-size: 1.5rem;
+    margin: 0.4rem 0rem 0rem 2rem;
+    padding: 0rem 0.4rem 0.7rem 0.5rem;
+  }
+
+  .text-box h2 {
+    font-size: 1.2rem;
+  }
+  
+  .text-box p {
+    font-size: 1.2rem;
+  }
+
+  #portada {
+    height: 40em;
+    width: 100%;
+    margin: 0.5em 0.9em 1.1em 0.3em;
+    padding: 0em;
+  }
+
+    #video-FSAE2014 {
+      padding: 0rem 0rem 0rem 0rem;
+  }
+
+}
+
+/* # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # */
+/* ** ***** ##############          Código      Responsive         ############## ***** ** */
+/* ** ***** ##############          Escritorio 1024 px - 1800 px       ############## ***** ** */
+/* # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # */
+
+@media only screen and (min-width: 1700px) and (max-width: 1800px) {
+
+  video {
+    height: 40em;
+  }
+
+  .content {
+    margin: 0em 0em 10em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1699px) {
+  
+  .container-video {
+    background-size: cover;
+      width: 100%;
+  }
+
+  .content {
+    margin: 0em 0em 11em 0em;
+  }
+}        
+
+@media only screen and (min-width: 1500px) and (max-width: 1599px) {
+  
+  .container-video {
+    background-size: contain;
+    width: 100%;
+  }
+
+  .content {
+    margin: 0em 0em 12em 0em;
+  }
+      
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1499px) {
+
+  .container-video {
+    background-size: contain;
+    width: 100%;
+  }
+
+  .content {
+    margin: 0em 0em 13em 0em;
+  }
+    
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1399px) {
+
+  .container-video {
+    background-size: contain;
+    width: 100%;
+  }
+
+  .content {
+    margin: 0em 0em 14em 0em;
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1299px) {
+
+  .container-video {
+    background-size: contain;
+    width: 100%;
+  }
+
+  .content {
+    margin: 0em 0em 15em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1199px) {
+
+
+  .container-video {
+    background-size: contain;
+    width: 100%;
+  }
+
+  .content {
+    margin: 0em 0em 16em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1099px) {
+
+  .container-video {
+    background-size: contain;
+    width: 100%;
+    height: 40em;
+    margin: 0em;
+  }
+
+  #myVideo {
+    height: 25em;
+    margin: 0em;
+  }
+
+  #myVideo {
+    height: 25em;
+    margin: 0em;
+  }
+
+  .container-reloj {
+    height: 8em;
+    margin: 0.5em;
+  }
+
+  .cont-reloj {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    width: 45%;
+    margin: 0em 0em 13em 0em;
+    padding: 0.5em;
+  }
+
+  .content button {
+    font-size: 0.6rem;
+  }
+
+}
+
+
+/* # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # */
+/* ** ***** ##############          Código      Responsive         ############## ***** ** */
+/* ** ***** ##############          Escritorio 600 px - 1023 px       ############## ***** ** */
+/* # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # # * # * # * # * # * # */
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+
+  /* ** ***** Barra de Navegación ***** ** */
+  #barra-navegacion { 
+    height: 80px;
+    margin: 5px;
+    padding: 0px 5px;
+  }
+
+  #logo {
+    font-size: 1.5em;
+    margin:0 0 0 0.3em;
+  }
+  
+  #menu ul a {
+    font-size:15px;
+    padding:5px 10px;
+  }
+
+  /* ** ***** Reloj ***** ** */
+  
+  .container-reloj {
+    height: 4em;
+    margin: 2em;
+  }
+
+  .cont-reloj{
+    width: 90%;
+    font-size: 2rem;
+    box-shadow: 0 0 20px rgb(48, 224, 233);
+    outline-offset: 4px;
+    outline: 3px solid #ffff;
+    margin: 0.4rem 2rem 1rem 2rem;
+    padding: 0.8rem;
+  }
+
+  #fec_Datos {
+    font-size: 1.6rem;
+    margin: 0.4rem 0rem 0rem 2rem;
+    padding: 0rem 0.4rem 0.7rem 0.5rem;
+  }
+
+  /* ** ***** Caja de Texto ***** ** */
+
+  .text-box {
+    margin: 0.5rem 2rem 2rem 2rem;
+  }
+
+  .text-box h2 {
+    font-size: 2rem;
+  }
+  
+  .text-box p {
+    font-size: 1.8rem;
+  }
+
+  .espacio {
+    height: 50px;
+  }
+
+  #portada {
+    height: 25em;
+    width: 100%;
+    margin: 3em 0.9em 1.1em 0.3em;
+    padding: 0em;
+  }
+
+  .container-video {
+    height: 20em;
+    width: 100%;
+    margin: 2em 0em 0em 0em;
+  }
+
+  #video-FSAE2014 {
+    padding: 0rem 0rem 0rem 0rem;
+  }
+
+  #myVideo {
+    height: 15em;
+    position: relative;
+    width: 90%;
+    border-radius: 1em;
+    z-index: 0;
+    margin: 0em;
+  }
+
+  .content {
+    width: 45%;
+    margin: 0em 0em 14em 0em;
+    padding: 0.5em;
+  }
+
+  .content button {
+    font-size: 0.6rem;
+  }
+       
+}
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1023px) {
+
+  .container-video {
+    height: 30em;
+    margin: 0em;
+  }
+
+  #myVideo {
+    height: 30em;
+    margin: 0em;
+  }
+
+  .content {
+    width: 60%;
+    margin: 0em 0em 10em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 900px) and (max-width: 999px) {
+
+  .container-video {
+    height: 28em;
+    margin: 0em;
+  }
+
+  #myVideo {
+    height: 28em;
+    margin: 0em;
+  }
+
+  .content {
+    width: 55%;
+    margin: 0em 0em 13em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 899px) {
+
+  .container-video {
+    height: 26em;
+    
+  }
+
+  #myVideo {
+    height: 25em;
+    margin: 0em;
+  }
+  .content {
+    width: 50%;
+    margin: 0em 0em 13em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 799px) {
+
+  .container-video {
+    height: 25em;
+    margin: 0em;
+  }
+
+  #myVideo {
+    height: 25em;
+    margin: 0em;
+  }
+
+  .content {
+    width: 55%;
+    margin: 0em 0em 16em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+
+  .container-video {
+    height: 24em;
+    margin: 0em;
+    background-size: contain;
+  }
+
+  #myVideo {
+    height: 24em;
+    margin: 0em;
+  }
+
+  .content {
+    width: 60%;
+    margin: 0em 0em 18em 0em;
+  }
+  
+}
+
+
+
+/* ** ***** Responsive 211 - 599 px ***** ** */
+
+@media only screen and (min-width: 211px) and (max-width: 599px) {
+
+  /* ** ***** Barra de Navegación ***** ** */
+  #barra-navegacion { 
+    height: 80px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 5px;
+  }
+
+  #logo {
+    font-size: 1.5em;
+    margin:0 0 0 0.3em;
+  }
+
+  #menu ul a {
+    font-size:15px;
+    padding:5px 10px;
+  }
+
+    /* ** ***** Reloj ***** ** */
+    
+    .container-reloj {
+      height: 4em;
+      margin: 2em;
+    }
+
+    .cont-reloj{
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      box-shadow: 0 0 20px rgb(48, 224, 233);
+      outline-offset: 4px;
+      outline: 3px solid #ffff;
+      margin: 0.5rem;
+      padding: 0.4rem;
+    }
+
+    #fec_Datos {
+      font-size: 1rem;
+      margin: 0.3rem;
+      padding: 0.2rem;
+    }
+
+    /* ** ***** Caja de Texto ***** ** */
+
+    .text-box {
+      width: 100%;
+      margin: 1rem 0.3rem 0.5rem 0.3rem ;
+      padding: 0.4em;
+    }
+
+    .text-box h2 {
+      font-size: 1rem;
+    }
+    
+    .text-box p {
+      font-size: 1rem;
+    }
+
+    .espacio {
+      height: 20px;
+    }
+
+    #portada {
+      height: 12em;
+      width: 100%;
+      margin: 3em 0.9em 1.1em 0.3em;
+      padding: 0em;
+    }
+
+    .container-video {
+      height: 12em;
+      width: 100%;
+      margin: 0.1em 0em 0em 0em;
+      background-size: cover;
+    }
+
+    #video-FSAE2014 {
+      height: 12em;
+      padding: 0rem 0rem 0rem 0rem;
+    }
+
+    #myVideo {
+      height: 10em;
+      position: relative;
+      width: 90%;
+      border-radius: 1em;
+      z-index: 0;
+      margin: 0.1em 0em 0em 0em;
+    }
+
+    .content {
+      width: 55%;
+      margin: 0em 0em 31em 0em;
+      padding: 0.5em;
+    }
+
+    .content button {
+      font-size: 0.6rem;
+    }     
+}
+
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+
+  .container-video {
+    height: 16em;
+  }
+
+  #myVideo {
+    height: 10em;
+    width: 100%;
+  }
+  
+  .content {
+    width: 50%;
+    margin: 0em 0em 27em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+
+  .container-video {
+    height: 14em;
+    width: 100%;
+  }
+
+  #myVideo {
+    height: 8em;
+    width: 100%;
+    background-size: contain;
+  }
+  
+  .content {
+    width: 55%;
+    margin: 0em 0em 29em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+
+  .container-video {
+    height: 11em;
+    width: 100%;
+  }
+
+  #myVideo {
+    height: 8em;
+    width: 100%;
+    background-size: contain;
+  }
+
+  .content {
+    width: 55%;
+    margin: 0em 0em 29em 0em;
+  }
+
+}
+
+@media only screen and (min-width: 211px) and (max-width: 299px) {
+
+  #portada {
+    height: 10em;
+   
+  }
+
+  .container-video {
+    height: 8em;
+    width: 100%;
+    margin: 2em 0 0 0;
+  }
+
+  #video-FSAE2014 {
+    height: 8em;
+  }
+
+  #myVideo {
+    height: 7em;
+    width: 100%;
+    background-size: contain;
+  }
+
+  .content {
+    width: 45%;
+    margin: 0em 0em 31em 0em;
+    padding: 0.2em;
+  }
+
+  .content button {
+    font-size: 0.3rem;
+  }
+  
+}
+
+  /* ** ***** Responsive 200 - 210 px ***** ** */
+
+  @media only screen and (max-width: 210px) {
+  
+  /* ** ***** Barra de Navegación ***** ** */
+  #barra-navegacion { 
+    height: 12em;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5em 0.2em 0.25em 0.2em;
+    padding: 0px 5px;
+  }
+
+  #logo {
+    font-size: 1.5em;
+    margin: 0.2em;
+  }
+
+  #menu {
+    padding: 0.2em 0.2em 0.2em 0em;
+  }
+
+  #menu ul a {
+    font-size:15px;
+    padding:5px 10px;
+  }
+
+  /* ** ***** Reloj ***** ** */
+
+  .container-reloj {
+    height: 10em;
+    margin: 0.5em 1em;
+  }
+  
+  .cont-reloj{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    box-shadow: 0 0 20px rgb(48, 224, 233);
+    outline-offset: 4px;
+    outline: 3px solid #ffff;
+    margin: 0.1rem 0.3rem 0rem 0.3rem;
+    padding: 0.4rem;
+  }
+
+  #fec_Datos {
+    font-size: 1rem;
+    margin: 0.4rem 0rem 0rem 0.4rem;
+    padding: 0rem 0.4rem 0.7rem 0.5rem;
+  }
+
+  /* ** ***** Caja de Texto ***** ** */
+
+  .text-box {
+    width: 100%;
+    margin: 1rem 0.3rem 0.5rem 0.3rem ;
+    padding: 0.4em;
+  }
+
+  .text-box h2 {
+    font-size: 0.8rem;
+  }
+  
+  .text-box p {
+    font-size: 0.8rem;
+  }
+
+  .espacio {
+    height: 20px;
+  }
+
+  #portada {
+    height: 7em;
+    width: 100%;
+    margin: 0.3em;
+    padding: 0em;
+  }
+
+  .container-video {
+    height: 6em;
+    width: 100%;
+    margin: 0.1em 0em 0em 0em;
+    padding: 0.1em;
+    background-size: contain;
+  }
+
+  #video-FSAE2014 {
+    height: 6em;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+
+  #myVideo {
+    height: 5em;
+    position: relative;
+    width: 90%;
+    border-radius: 1em;
+    z-index: 0;
+    margin: 0.1em 0em 0em 0em;
+  }
+
+  .content {
+    width: 55%;
+    margin: 0em 0em 26em 0em;
+    padding: 0.3em;
+  }
+
+  .content button {
+    font-size: 0.3rem;
+  }  
+
+}
